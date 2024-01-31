@@ -4,7 +4,7 @@ const cors = require('cors') ;
 
 const app = express() ;
 const corsOptions = {
-  origin: ['https://codeforces-account-worth-om8p.vercel.app', 'http://localhost:3000'],
+  origin: ['https://codeforces-account-worth-om8p.vercel.app/', 'http://localhost:3000/'],
   credentials: true
 };
 app.use(cors({
