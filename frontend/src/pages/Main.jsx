@@ -12,7 +12,8 @@ const Main = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:3000/${id}`)
+      .get(`codeforces-account-worth.vercel.app
+/${id}`)
       .then((response) => {
         setLoading(false);
         setPrblm(response.data.score);
