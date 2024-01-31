@@ -7,10 +7,12 @@ const corsOptions = {
   origin: ['https://codeforces-account-worth-om8p.vercel.app', 'http://localhost:3000'],
   credentials: true
 };
-
-app.use(cors(corsOptions));
-app.use(express.json()) ;
-// app.use(cors()) ;
+app.use(cors({
+    origin: 'https://codeforces-account-worth-om8p.vercel.app',
+    methods: ['GET'],
+    allowedHeaders: ["Content-Type"],
+    credentials: true
+}));
 
 app.get('/:username' , async (req,res)=>{  
     const username = req.params.username ;
