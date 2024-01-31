@@ -3,11 +3,12 @@ const axios = require("axios") ;
 const cors = require('cors') ;
 
 const app = express() ;
+const corsOptions = {
+  origin: ['https://codeforces-account-worth-om8p.vercel.app', 'http://localhost:3000'],
+  credentials: true
+};
 
-app.use(cors({
-  origin: ['https://codeforces-account-worth-om8p.vercel.app', 'http://localhost:3000']
-}));
-
+app.use(cors(corsOptions));
 app.use(express.json()) ;
 // app.use(cors()) ;
 
