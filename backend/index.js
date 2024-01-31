@@ -4,8 +4,12 @@ const cors = require('cors') ;
 
 const app = express() ;
 
+app.use(cors({
+  origin: ['https://codeforces-account-worth-om8p.vercel.app/']
+}));
+
 app.use(express.json()) ;
-app.use(cors()) ;
+// app.use(cors()) ;
 
 app.get('/:username' , async (req,res)=>{  
     const username = req.params.username ;
